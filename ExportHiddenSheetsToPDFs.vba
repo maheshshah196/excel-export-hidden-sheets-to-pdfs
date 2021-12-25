@@ -4,7 +4,6 @@ Sub ExportHiddenSheetsToPDFs()
     'for Excel 2010 and later
     Dim wsA As Worksheet
     Dim wbA As Workbook
-    Dim strName As String
     Dim strFolder As String
     Dim strFile As String
     Dim strPathFile As String
@@ -29,7 +28,7 @@ Sub ExportHiddenSheetsToPDFs()
             wsA.Visible = True
             
             'create name for savng file
-            strFile = strName & ".pdf"
+            strFile = wsA.Name & ".pdf"
             strPathFile = strFolder & "\" & strFile
             
             wsA.ExportAsFixedFormat _
