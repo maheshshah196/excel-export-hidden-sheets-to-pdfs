@@ -28,10 +28,6 @@ Sub ExportHiddenSheetsToPDFs()
         If wsA.Visible = False Then
             wsA.Visible = True
             
-            'replace spaces and periods in sheet name
-            strName = Replace(wsA.Name, " ", "")
-            strName = Replace(strName, ".", "_")
-            
             'create name for savng file
             strFile = strName & ".pdf"
             strPathFile = strFolder & "\" & strFile
